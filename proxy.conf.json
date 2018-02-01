@@ -1,0 +1,10 @@
+{
+  "/api": {
+    "target": "https://api.amalyze.com/0.0.12",
+    "secure": false,
+    "pathRewrite": {
+      "^/api": ""
+    },
+    "changeOrigin": true
+  }
+}
