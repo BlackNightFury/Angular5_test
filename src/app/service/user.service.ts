@@ -15,13 +15,13 @@ export class UserService {
 
   getUserStatus(token) : Observable<any>{
     let headers = new Headers();
-    headers.append('Content-Type', 'application/json');
+    headers.append('Content-Type', 'text/plain');
     headers.append('X-XSRF-TOKEN', token["xsrf-token"]);
     headers.append('X-FALCON-TOKEN', token["falcon-token"]);
     
     console.log(headers);
     let options = new RequestOptions({ headers: headers });
-    return this.http.post('https://api.amalyze.com/0.0.12/system.user.status',{}, options);
+    return this.http.post('https://api.amalyze.com/0.0.12/system.user.status',"{}", options);
   }
   
 }
